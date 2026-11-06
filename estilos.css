@@ -71,3 +71,4 @@ body { background: var(--fondo); color: var(--texto); font-family: var(--sans); 
   html { scroll-behavior: auto; }
   .tarjeta, .punto::after, .velo { transition: none; }
 }
+
