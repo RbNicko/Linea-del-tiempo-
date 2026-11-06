@@ -1,50 +1,70 @@
 
 const eventos = [
   {
-    fecha: "3000 a.C.", era: "Edad Antigua",
-    titulo: "Nace la figura del escriba",
-    quien: "Surge en Mesopotamia y Egipto a raíz de la invención de la escritura cuneiforme y jeroglífica.",
-    relevancia: "Es la primera profesión administrativa formal: encargada de la contabilidad, los impuestos y los registros del Estado.",
-    contexto: "Imhotep (c. 2650 a.C.) fue arquitecto y médico; Hipócrates (c. 460 a.C.) formalizó la ética médica. El trabajo pasa de la división natural a funciones especializadas."
+    fecha: "c. 10,000 a.C.", era: "Prehistoria",
+    titulo: "Revolución Neolítica: la primera división del trabajo",
+    quien: "Surgen los primeros agricultores, ganaderos y alfareros al aparecer la agricultura.",
+    relevancia: "Marca la primera gran división del trabajo: se pasa de la subsistencia pura a oficios distintos.",
+    contexto: "El dominio de la metalurgia (Edad de Bronce y Hierro), la rueda, la escritura y la irrigación agrícola traen nuevos oficios. En Grecia y Roma el trabajo manual se asigna a los esclavos y las artes liberales quedan para la élite libre."
+  },
+  {
+    fecha: "c. 400 a.C.", era: "Edad Antigua",
+    titulo: "Se institucionaliza el Juramento Hipocrático",
+    quien: "Lo formalizan Hipócrates y sus discípulos en la Antigua Grecia.",
+    relevancia: "La medicina deja de ser una práctica empírico-religiosa y se convierte en una profesión basada en la observación científica y en una ética profesional estricta.",
+    contexto: "Hipócrates (460–370 a.C.) es el padre de la medicina occidental. Imhotep (c. 2650 a.C.) es el primer arquitecto y médico del que hay registro formal. Hacia 450 a.C. el pensamiento clásico separa el trabajo intelectual del físico."
   },
   {
     fecha: "1088", era: "Edad Media y Renacimiento",
-    titulo: "Se funda la Universidad de Bolonia",
-    quien: "Impulsada por juristas y estudiantes en Italia.",
-    relevancia: "Nace la educación superior profesional y los títulos oficiales para ejercer derecho y medicina.",
-    contexto: "Los gremios organizan el aprendizaje en aprendiz, oficial y maestro. Gutenberg (c. 1440) populariza los manuales técnicos con la imprenta."
+    titulo: "Se funda la Universidad de Bolonia y las titulaciones oficiales",
+    quien: "Fundada por juristas, entre ellos Irnerio, en Bolonia, Italia.",
+    relevancia: "Es la primera institución que certifica con títulos académicos la capacidad de ejercer profesiones como el derecho, y desplaza el monopolio del aprendizaje familiar o gremial.",
+    contexto: "Surgen las universidades medievales, orientadas al derecho, la teología y la medicina. Nace el concepto formal de profesión, ligado a la educación superior y a las corporaciones de oficios."
   },
   {
-    fecha: "1769", era: "Revolución Industrial",
-    titulo: "James Watt patenta la máquina de vapor",
-    quien: "El ingeniero escocés perfeccionó el diseño de Newcomen con un condensador separado.",
-    relevancia: "Marca el nacimiento de las ingenierías industriales y el paso de la fuerza humana a los procesos mecanizados.",
-    contexto: "En 1810 Humboldt funda la Universidad de Berlín y une investigación y enseñanza. Surgen las ingenierías mecánica, civil y de minas, y el trabajo asalariado en fábricas."
+    fecha: "1268", era: "Edad Media y Renacimiento",
+    titulo: "Ordenanza de gremios de París y Registro de Oficios",
+    quien: "Redactado por Étienne Boileau, preboste de París durante el reinado de Luis IX.",
+    relevancia: "Reúne por primera vez las reglas, derechos, deberes y estructura (aprendiz, oficial, maestro) de los oficios manuales y comerciales. Sienta las bases del derecho laboral y corporativo profesional.",
+    contexto: "Hacia 1150 se institucionalizan los gremios de comerciantes y artesanos en Europa Occidental. Gutenberg (c. 1400–1468) inventa la imprenta de tipos móviles y Leonardo da Vinci (1452–1519) encarna al hombre del Renacimiento: arte, ingeniería y anatomía."
   },
   {
-    fecha: "1911", era: "Siglo XX",
-    titulo: "Frederick W. Taylor publica Los principios de la administración científica",
-    quien: "Obra del ingeniero estadounidense Frederick W. Taylor.",
-    relevancia: "Convierte los talleres en corporaciones estructuradas y da origen a carreras de gestión, logística y administración de personal.",
-    contexto: "Henri Fayol sistematiza la administración de empresas en 1916. Aparecen los departamentos de Recursos Humanos y marketing."
+    fecha: "1776", era: "Revolución Industrial",
+    titulo: "Adam Smith publica La riqueza de las naciones",
+    quien: "Obra del economista y filósofo escocés Adam Smith.",
+    relevancia: "Teoriza la división del trabajo con el ejemplo de la fábrica de alfileres y explica cómo la especialización profesional dispara la productividad. Es la base del diseño del trabajo moderno.",
+    contexto: "La Primera Revolución Industrial (1760–1840) mecaniza los procesos textiles y el transporte. James Watt (1736–1819) desarrolla la máquina de vapor moderna. El sistema gremial desaparece poco a poco y surgen ingenieros industriales, administradores y contadores."
   },
   {
-    fecha: "1962", era: "Siglo XX",
-    titulo: "Primer departamento de Ciencias de la Computación",
-    quien: "La Universidad de Purdue (EE. UU.) lo establece como carrera académica.",
-    relevancia: "Formaliza las profesiones informáticas y hace del software un campo profesional independiente.",
-    contexto: "Antes llegaron el transistor (1947) y después el microprocesador Intel 4004 (1971) y la World Wide Web de Tim Berners-Lee (1989)."
+    fecha: "1911", era: "Revolución Industrial",
+    titulo: "Taylor publica The Principles of Scientific Management",
+    quien: "Obra de Frederick Winslow Taylor (1856–1915) en Estados Unidos.",
+    relevancia: "Da origen formal a la ingeniería industrial y a la gestión de operaciones: el trabajo empírico de fábrica pasa a medirse con tiempos, estándares y cronómetros.",
+    contexto: "Henry Ford (1863–1947) lleva la especialización a la producción en cadena de montaje. El ferrocarril, el telégrafo, la electricidad y el motor de combustión interna aceleran las profesiones técnicas modernas."
   },
   {
-    fecha: "2020 – 2022", era: "Siglo XXI",
-    titulo: "Trabajo remoto global e inteligencia artificial generativa",
-    quien: "Detonado por las restricciones sanitarias de 2020 y por el despegue masivo de la IA generativa desde 2022.",
-    relevancia: "El puesto de trabajo deja de ser un lugar físico y se automatizan tareas cognitivas: las carreras se vuelven interdisciplinarias.",
-    contexto: "Crecen los científicos de datos, los ingenieros de IA y los especialistas en ciberseguridad. El aprendizaje continuo se vuelve parte de la carrera."
+    fecha: "1919", era: "Siglo XX",
+    titulo: "Se crea la Organización Internacional del Trabajo",
+    quien: "Se crea mediante el Tratado de Versalles, tras la Primera Guerra Mundial.",
+    relevancia: "Es el primer organismo internacional que regula el trabajo a escala global. Establece estándares como la jornada de 8 horas, la protección a la maternidad y la seguridad e higiene laboral.",
+    contexto: "Se consolidan los colegios profesionales y los títulos expedidos por el Estado. El sector terciario (servicios, finanzas, comunicación) supera al industrial. W. Edwards Deming (1900–1993) es clave en la gestión de la calidad."
+  },
+  {
+    fecha: "1947 – 1969", era: "Siglo XX",
+    titulo: "Nace la era digital: transistor y ARPANET",
+    quien: "En 1947 se inventa el transistor y en 1969 se crea ARPANET, antecesor de Internet.",
+    relevancia: "Inicia la era digital, y a finales de siglo la informática revoluciona la productividad.",
+    contexto: "Alan Turing (1912–1954) es el padre de la informática teórica y de la inteligencia artificial. Llegan los circuitos integrados, la computadora personal, la telefonía celular y el software de productividad."
+  },
+  {
+    fecha: "2020 – 2026", era: "Siglo XXI",
+    titulo: "Teletrabajo masivo e IA generativa",
+    quien: "La pandemia de COVID-19 (2020) acelera el teletrabajo y la educación virtual. Entre 2022 y 2026 se generaliza la IA generativa en el trabajo del conocimiento.",
+    relevancia: "El trabajo pasa de presencial a híbrido o remoto, la IA y la robótica automatizan tareas rutinarias y surgen roles interdisciplinarios: científicos de datos, especialistas en ciberseguridad, prompt engineers y éticos de IA.",
+    contexto: "El smartphone masivo (2007) abrió el trabajo conectado en movilidad. Hinton, LeCun y Bengio, precursores del aprendizaje profundo, sostienen las herramientas actuales, junto con la computación en la nube, el IoT y blockchain."
   }
 ];
 
-/* ---------- Construir la línea ---------- */
 const lista = document.getElementById("linea");
 eventos.forEach((e, i) => {
   const li = document.createElement("li");
@@ -58,7 +78,7 @@ eventos.forEach((e, i) => {
   lista.appendChild(li);
 });
 
-/* ---------- Ficha ampliada (zoom in / zoom out) ---------- */
+
 const reducidoUI = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const DUR = reducidoUI ? 1 : 600;
 const EASE = "cubic-bezier(.22,.8,.2,1)";
@@ -142,13 +162,13 @@ lista.addEventListener("click", ev => {
 velo.addEventListener("click", cerrar);
 document.addEventListener("keydown", ev => { if (ev.key === "Escape") cerrar(); });
 
-/* Resalta el evento cercano al centro de la pantalla */
+
 const obs = new IntersectionObserver(entradas => {
   entradas.forEach(en => en.target.classList.toggle("activo", en.isIntersecting));
 }, { rootMargin: "-35% 0px -35% 0px" });
 document.querySelectorAll(".evento").forEach(el => obs.observe(el));
 
-/* ---------- Cielo estrellado ---------- */
+
 const lienzo = document.getElementById("estrellas");
 const ctx = lienzo.getContext("2d");
 const reducido = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -194,3 +214,4 @@ function dibujar() {
 addEventListener("resize", () => { crearEstrellas(); if (reducido) dibujar(); });
 crearEstrellas();
 dibujar();
+
