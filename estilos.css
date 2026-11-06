@@ -1,0 +1,73 @@
+:root {
+  --fondo: #000;
+  --texto: #f2f2f2;
+  --suave: #a9a9b3;
+  --linea: #fff;
+  --glow: 0 0 6px #fff, 0 0 18px rgba(255,255,255,.85), 0 0 42px rgba(160,190,255,.55);
+  --serif: "Fraunces", Georgia, serif;
+  --sans: "Instrument Sans", system-ui, sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scrollbar-gutter: stable; }
+body { background: var(--fondo); color: var(--texto); font-family: var(--sans); line-height: 1.6; }
+
+#estrellas { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; }
+.portada, main, .fuentes { position: relative; z-index: 1; }
+
+.portada { min-height: 80vh; display: grid; place-content: center; text-align: center; padding: 2rem 1.5rem; }
+.portada h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(2.2rem, 6vw, 4.5rem); line-height: 1.1; max-width: 16ch; margin: 0 auto 1.2rem; text-shadow: 0 0 30px rgba(255,255,255,.25); }
+.portada p { color: var(--suave); font-size: 1.1rem; }
+
+.linea { list-style: none; position: relative; max-width: 1050px; margin: 0 auto; padding: 4rem 1rem 6rem; }
+.linea::before { content: ""; position: absolute; top: 14px; bottom: 0; left: 50%; width: 3px; margin-left: -1.5px; background: var(--linea); box-shadow: var(--glow); border-radius: 2px; }
+
+.evento { position: relative; width: 50%; padding: 0 3rem 4.5rem 0; }
+.evento:nth-child(even) { margin-left: 50%; padding: 0 0 4.5rem 3rem; }
+
+.punto { position: absolute; top: 1.4rem; width: 18px; height: 18px; border-radius: 50%; background: var(--linea); box-shadow: var(--glow); right: -9px; }
+.evento:nth-child(even) .punto { right: auto; left: -9px; }
+.punto::after { content: ""; position: absolute; inset: -9px; border-radius: 50%; border: 1px solid rgba(255,255,255,.35); opacity: 0; transform: scale(.6); transition: opacity .5s, transform .5s; }
+.evento.activo .punto::after { opacity: 1; transform: scale(1); }
+
+.tarjeta { display: block; width: fit-content; min-width: 13rem; margin-left: auto; text-align: right; font: inherit; color: inherit; cursor: pointer;
+  background: rgba(255,255,255,.045); border: 1px solid rgba(255,255,255,.16); border-radius: 10px; padding: 1.1rem 1.5rem;
+  backdrop-filter: blur(3px); opacity: .6; transition: opacity .5s, border-color .4s, box-shadow .4s, transform .4s; }
+.evento:nth-child(even) .tarjeta { margin-left: 0; text-align: left; }
+.evento.activo .tarjeta { opacity: 1; border-color: rgba(255,255,255,.4); }
+.tarjeta:hover, .tarjeta:focus-visible { opacity: 1; border-color: rgba(255,255,255,.75); box-shadow: 0 0 24px rgba(160,190,255,.3); transform: scale(1.04); outline: none; }
+.tarjeta.oculta { opacity: 0; pointer-events: none; transition: none; }
+.tarjeta .fecha, .ficha .fecha { display: block; font-family: var(--serif); font-size: 2rem; line-height: 1.1; }
+.tarjeta .era, .ficha .era { display: block; color: var(--suave); font-size: .95rem; }
+
+.velo { position: fixed; inset: 0; z-index: 10; background: rgba(0,0,0,.72); backdrop-filter: blur(4px); opacity: 0; pointer-events: none; transition: opacity .5s ease; }
+.velo.visible { opacity: 1; pointer-events: auto; cursor: zoom-out; }
+.ficha { display: none; position: fixed; inset: 0; margin: auto; z-index: 20; width: min(640px, 92vw); height: fit-content; max-height: 88vh; overflow-y: auto;
+  transform-origin: 0 0; background: rgba(8,8,14,.94); border: 1px solid rgba(255,255,255,.45); border-radius: 14px; padding: 2.2rem 2rem;
+  box-shadow: 0 0 50px rgba(160,190,255,.25), 0 0 8px rgba(255,255,255,.25); outline: none; }
+.ficha.visible { display: block; }
+.ficha .era { margin-bottom: 1rem; }
+.ficha h3 { font-family: var(--serif); font-weight: 600; font-size: 1.45rem; line-height: 1.25; margin-bottom: 1rem; }
+.ficha p { font-size: 1rem; margin-bottom: .8rem; max-width: 62ch; }
+.ficha strong { font-weight: 500; color: #fff; }
+.ficha .contexto { color: var(--suave); border-top: 1px solid rgba(255,255,255,.14); padding-top: 1rem; margin: 1.1rem 0 0; }
+
+.fuentes { padding: 2rem max(1.5rem, calc((100% - 700px) / 2)) 5rem; color: var(--suave); font-size: .9rem; }
+.fuentes h2 { font-family: var(--serif); font-weight: 400; color: var(--texto); font-size: 1.4rem; margin-bottom: .8rem; }
+.fuentes ul { padding-left: 1.1rem; }
+.fuentes::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; margin-left: -1.5px; z-index: -1; background: var(--linea); box-shadow: var(--glow); }
+.fuentes h2, .fuentes li { text-shadow: 0 0 4px #000, 0 0 10px #000, 0 0 16px #000; }
+
+@media (max-width: 760px) {
+  .linea::before { left: 22px; margin-left: 0; }
+  .linea::after { left: 9.5px; margin-left: 0; }
+  .fuentes::before { left: 22px; margin-left: 0; }
+  .evento, .evento:nth-child(even) { width: 100%; margin-left: 0; padding: 0 0 3rem 3.2rem; }
+  .punto, .evento:nth-child(even) .punto { left: -1.5px; right: auto; }
+  .tarjeta, .evento:nth-child(even) .tarjeta { margin-left: 0; text-align: left; }
+  .ficha { padding: 1.6rem 1.3rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .tarjeta, .punto::after, .velo { transition: none; }
+}
